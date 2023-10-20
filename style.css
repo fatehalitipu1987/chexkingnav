@@ -1,0 +1,106 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html ,body{
+    width: 100%;
+    height: 100%;
+}
+.mf{
+    height: 10px;
+    width: 10px;
+    background-color: 
+    #111;
+    border-radius: 100%;
+    position: absolute;
+    transition: .2s linear;
+  transform: translate(-7% , -7%);
+}
+.menu{
+    height: 2vw;
+    width: 2vw;
+    cursor: pointer;
+    position: fixed;
+    right: 4vw;
+    top: 1.7vw;
+    transition: 1s linear;
+    z-index: 99;
+   
+}
+.menu-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    width: 0;
+    background-color: #111;
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    transition: width .6s linear;
+}
+.menu-box.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 40%;
+    background-color: #111;
+    position: fixed;
+    right: 0;
+    opacity: 1;
+    transition: width .6s linear;
+}
+
+.menu-box li{
+    list-style: none;
+}
+.menu-box li a{
+    
+    position: relative;
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 2vw;
+    padding-left: 2.5vw;
+}
+.links a{
+    color: #111;
+    font-size: 1.1vw;
+    font-weight: 900;
+}
+.nav h2{
+    font-size: 1.9vw;
+}
+
+@media (max-width :1000px) {
+    .nav{
+        width: 2%;
+    }
+    .links{
+        display: none;
+    }
+    .menu{
+        height: 9vw;
+        width: 9vw;
+    }
+    .nav h2{
+        font-size: 7.1vw;
+    }
+    .menu-box.active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: #111;
+        position: fixed;
+        right: 0;
+        opacity: 1;
+        transition: width .6s linear;
+    }
+}
